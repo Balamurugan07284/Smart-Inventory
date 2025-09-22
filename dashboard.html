@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Smart Inventory Tracking System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Dashboard for Smart Inventory Tracking System." />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header Navigation -->
+  <header class="bg-white shadow p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <h1 class="text-xl font-bold text-blue-700">Smart Inventory</h1>
+      <nav class="flex space-x-6 text-sm font-medium">
+        <a href="index.html" class="nav-link hover:text-blue-600">Home</a>
+        <a href="dashboard.html" class="nav-link text-blue-600 font-bold">Dashboard</a>
+        <a href="overview.html" class="nav-link hover:text-blue-600">Overview</a>
+        <a href="features.html" class="nav-link hover:text-blue-600">Features</a>
+        <a href="inventory.html" class="nav-link hover:text-blue-600">Inventory</a>
+        <a href="signin.html" class="nav-link hover:text-blue-600">Sign In</a>
+        <a href="signup.html" class="nav-link hover:text-blue-600">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto mt-8 p-6">
+    <h2 class="text-3xl font-semibold mb-6">Dashboard</h2>
+
+    <!-- Summary Cards -->
+    <div class="grid md:grid-cols-4 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-gray-700">Total Items</h3>
+        <p class="text-3xl font-bold text-blue-600">1,245</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-gray-700">Low Stock Items</h3>
+        <p class="text-3xl font-bold text-red-600">23</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-gray-700">Out of Stock</h3>
+        <p class="text-3xl font-bold text-red-600">5</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-gray-700">Revenue This Month</h3>
+        <p class="text-3xl font-bold text-green-600">$45,230</p>
+      </div>
+    </div>
+
+    <!-- Charts Placeholder -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-4">Inventory Trends</h3>
+        <div class="h-64 bg-gray-200 rounded flex items-center justify-center">
+          <p class="text-gray-500">Chart Placeholder - Inventory Levels Over Time</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-4">Top Selling Items</h3>
+        <div class="h-64 bg-gray-200 rounded flex items-center justify-center">
+          <p class="text-gray-500">Chart Placeholder - Sales Data</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activities -->
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h3 class="text-xl font-semibold mb-4">Recent Activities</h3>
+      <ul class="space-y-3">
+        <li class="flex justify-between items-center border-b pb-2">
+          <span>Item "Laptop" stock updated to 50</span>
+          <span class="text-sm text-gray-500">2 hours ago</span>
+        </li>
+        <li class="flex justify-between items-center border-b pb-2">
+          <span>Low stock alert for "Mouse"</span>
+          <span class="text-sm text-gray-500">4 hours ago</span>
+        </li>
+        <li class="flex justify-between items-center border-b pb-2">
+          <span>New item "Keyboard" added</span>
+          <span class="text-sm text-gray-500">1 day ago</span>
+        </li>
+        <li class="flex justify-between items-center">
+          <span>Inventory report generated</span>
+          <span class="text-sm text-gray-500">2 days ago</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-xl font-semibold mb-4">Quick Actions</h3>
+      <div class="flex flex-wrap gap-4">
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add New Item</button>
+        <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Generate Report</button>
+        <button class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">Update Stock</button>
+        <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">View Alerts</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

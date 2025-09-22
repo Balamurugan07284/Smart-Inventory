@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Overview - Smart Inventory Tracking System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Overview page for Smart Inventory Tracking System." />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header Navigation -->
+  <header class="bg-white shadow p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <h1 class="text-xl font-bold text-blue-700">Smart Inventory</h1>
+      <nav class="flex space-x-6 text-sm font-medium">
+        <a href="index.html" class="nav-link hover:text-blue-600">Home</a>
+        <a href="dashboard.html" class="nav-link hover:text-blue-600">Dashboard</a>
+        <a href="overview.html" class="nav-link text-blue-600 font-bold">Overview</a>
+        <a href="features.html" class="nav-link hover:text-blue-600">Features</a>
+        <a href="inventory.html" class="nav-link hover:text-blue-600">Inventory</a>
+        <a href="signin.html" class="nav-link hover:text-blue-600">Sign In</a>
+        <a href="signup.html" class="nav-link hover:text-blue-600">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto mt-8 p-6">
+    <h2 class="text-3xl font-semibold mb-6">Inventory Overview</h2>
+
+    <!-- Key Metrics -->
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-gray-700">Total Inventory Value</h3>
+        <p class="text-3xl font-bold text-blue-600">$125,430</p>
+        <p class="text-sm text-green-600">+5.2% from last month</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-gray-700">Average Stock Level</h3>
+        <p class="text-3xl font-bold text-blue-600">78%</p>
+        <p class="text-sm text-gray-600">Across all categories</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-gray-700">Turnover Rate</h3>
+        <p class="text-3xl font-bold text-blue-600">4.2x</p>
+        <p class="text-sm text-green-600">+0.8x from last quarter</p>
+      </div>
+    </div>
+
+    <!-- Detailed Charts -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-4">Stock Levels by Category</h3>
+        <div class="h-64 bg-gray-200 rounded flex items-center justify-center">
+          <p class="text-gray-500">Pie Chart Placeholder - Category Distribution</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-4">Monthly Performance</h3>
+        <div class="h-64 bg-gray-200 rounded flex items-center justify-center">
+          <p class="text-gray-500">Line Chart Placeholder - Sales vs Stock</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Breakdown -->
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h3 class="text-xl font-semibold mb-4">Category Breakdown</h3>
+      <table class="w-full table-auto">
+        <thead>
+          <tr class="border-b">
+            <th class="text-left py-2">Category</th>
+            <th class="text-left py-2">Items</th>
+            <th class="text-left py-2">Value</th>
+            <th class="text-left py-2">Stock Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="py-2">Electronics</td>
+            <td class="py-2">245</td>
+            <td class="py-2">$45,230</td>
+            <td class="py-2"><span class="text-green-600">85%</span></td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-2">Clothing</td>
+            <td class="py-2">180</td>
+            <td class="py-2">$32,150</td>
+            <td class="py-2"><span class="text-yellow-600">65%</span></td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-2">Books</td>
+            <td class="py-2">320</td>
+            <td class="py-2">$18,750</td>
+            <td class="py-2"><span class="text-green-600">90%</span></td>
+          </tr>
+          <tr>
+            <td class="py-2">Home Goods</td>
+            <td class="py-2">150</td>
+            <td class="py-2">$29,300</td>
+            <td class="py-2"><span class="text-red-600">45%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Reports Section -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-xl font-semibold mb-4">Generate Reports</h3>
+      <div class="flex flex-wrap gap-4">
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Monthly Report</button>
+        <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Category Analysis</button>
+        <button class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">Stock Alerts</button>
+        <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Financial Summary</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
