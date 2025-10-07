@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-6">Authentication Status Test</h2>
+        
+        <div id="status" class="mb-4"></div>
+        
+        <div class="space-y-4">
+            <button id="checkAuth" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Check Authentication</button>
+            <button id="testLogin" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Set Logged In</button>
+            <button id="testLogout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Clear Auth</button>
+        </div>
+        
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold mb-2">Navigation Tests:</h3>
+            <div class="space-x-2">
+                <a href="dashboard.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm">Dashboard</a>
+                <a href="overview.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm">Overview</a>
+                <a href="features.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm">Features</a>
+                <a href="inventory.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm">Inventory</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateStatus() {
+            const token = localStorage.getItem('token');
+            const loggedIn = localStorage.getItem('loggedIn');
+            const status = document.getElementById('status');
+            
+            status.innerHTML = `
+                <div class="space-y-2">
+                    <div><strong>Token:</strong> ${token ? '✅ Present' : '❌ Missing'}</div>
+                    <div><strong>LoggedIn Flag:</strong> ${loggedIn === 'true' ? '✅ True' : '❌ False/Missing'}</div>
+                    <div><strong>Status:</strong> ${loggedIn === 'true' ? '<span class="text-green-600">Authenticated</span>' : '<span class="text-red-600">Not Authenticated</span>'}</div>
+                </div>
+            `;
+        }
+
+        document.getElementById('checkAuth').addEventListener('click', updateStatus);
+        
+        document.getElementById('testLogin').addEventListener('click', function() {
+            localStorage.setItem('token', 'fake.jwt.token');
+            localStorage.setItem('loggedIn', 'true');
+            updateStatus();
+            alert('Authentication set! Try navigating to protected pages now.');
+        });
+        
+        document.getElementById('testLogout').addEventListener('click', function() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('loggedIn');
+            updateStatus();
+            alert('Authentication cleared! Protected pages should redirect to signin now.');
+        });
+
+        // Initial status check
+        updateStatus();
+    </script>
+</body>
+</html>
